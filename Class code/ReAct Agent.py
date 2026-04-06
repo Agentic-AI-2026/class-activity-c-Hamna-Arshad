@@ -1,3 +1,7 @@
+from langchain_core.messages import SystemMessage, HumanMessage, ToolMessage
+from langchain_core.tools import Tool
+from langchain_core import llm
+from langchain_core.tools import get_mcp_tools
 # ─── ReAct AGENT with MCP Tools ──────────────────────────────────────────────
 REACT_SYSTEM = """You are a ReAct agent. Strictly follow this loop:
 Thought → Action (tool call) → Observation → Thought → ...
